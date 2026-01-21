@@ -1,0 +1,11 @@
+{
+  "name": "wonderui",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run -ws build"
+  }
+}
