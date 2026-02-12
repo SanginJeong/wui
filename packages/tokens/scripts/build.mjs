@@ -1,14 +1,18 @@
-import fs from "node:fs";
+import { rm, mkdir, cp } from "node:fs/promises";
 import path from "node:path";
 
-const root = path.resolve(process.cwd());
-const dist = path.join(root, "dist");
-fs.mkdirSync(dist, { recursive: true });
+const ROOT = process.cwd();
+const SRC_DIR = path.join(ROOT, "src");
+const DIST_DIR = path.join(ROOT, "dist");
 
-const files = ["tokens.css", "base.css", "typography.css"];
-
-for (const file of files) {
-  fs.copyFileSync(path.join(root, "src", file), path.join(dist, file));
+async function main() {
+  await rm(DIST_DIR, { recursive: true, force: true });
+  await mkdir(DIST_DIR, { recursive: true });
+  await cp(SRC_DIR, DIST_DIR, { recursive: true });
+  console.log("Build complete");
 }
 
-console.log("wonderui-tokens built:", files.map((f) => `dist/${f}`).join(", "));
+main().catch((err) => {
+  console.error("Build failed:", err);
+  process.exit(1);
+});
