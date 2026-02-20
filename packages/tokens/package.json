@@ -1,16 +1,15 @@
 {
   "name": "wonderui-tokens",
   "version": "0.0.1",
-  "private": false,
-  "type": "module",
-  "files": ["dist"],
-  "sideEffects": ["**/*.css"],
-  "exports": {
-    "./tokens.css": "./dist/tokens.css",
-    "./base.css": "./dist/base.css",
-    "./typography.css": "./dist/typography.css"
-  },
+  "main": "dist/tokens.css",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "node ./scripts/build.mjs"
+    "build": "node ./scripts/build.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "style-dictionary": "^4.4.0"
   }
 }

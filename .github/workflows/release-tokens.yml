@@ -1,0 +1,46 @@
+name: Release Tokens
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "packages/tokens/src/tokens.json"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: packages/tokens
+
+      - name: Build
+        run: npm run build
+        working-directory: packages/tokens
+
+      - name: Bump version & push tag
+        working-directory: packages/tokens
+        run: |
+          git config user.email "ci-bot@wonderui.com"
+          git config user.name "CI Bot"
+          npm version patch -m "chore: release %s [skip ci]"
+          git push --follow-tags
+
+      - name: Publish to npm
+        working-directory: packages/tokens
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish --access public
