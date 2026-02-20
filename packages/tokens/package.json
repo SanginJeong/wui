@@ -8,5 +8,8 @@
   "scripts": {
     "build": "node ./scripts/build.mjs",
     "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "style-dictionary": "^4.4.0"
   }
 }
