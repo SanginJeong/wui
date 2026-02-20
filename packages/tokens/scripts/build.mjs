@@ -1,18 +1,29 @@
-import { rm, mkdir, cp } from "node:fs/promises";
+import StyleDictionary from "style-dictionary";
+import { rm } from "node:fs/promises";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 
-const ROOT = process.cwd();
-const SRC_DIR = path.join(ROOT, "src");
-const DIST_DIR = path.join(ROOT, "dist");
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const ROOT = path.resolve(__dirname, "..");
 
-async function main() {
-  await rm(DIST_DIR, { recursive: true, force: true });
-  await mkdir(DIST_DIR, { recursive: true });
-  await cp(SRC_DIR, DIST_DIR, { recursive: true });
-  console.log("Build complete");
-}
+await rm(path.join(ROOT, "dist"), { recursive: true, force: true });
 
-main().catch((err) => {
-  console.error("Build failed:", err);
-  process.exit(1);
+const sd = new StyleDictionary({
+  source: [path.join(ROOT, "src/tokens.json")],
+  platforms: {
+    css: {
+      transformGroup: "css",
+      buildPath: "dist/",
+      files: [
+        {
+          destination: "tokens.css",
+          format: "css/variables",
+          options: { selector: ":root" },
+        },
+      ],
+    },
+  },
 });
+
+await sd.buildAllPlatforms();
+console.log("Build complete");
