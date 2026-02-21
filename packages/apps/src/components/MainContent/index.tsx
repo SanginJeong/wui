@@ -1,4 +1,4 @@
-import OverviewSection from "./sections/OverviewSection";
+import OverviewSection from "./sections/overview";
 import TokensSection from "./sections/TokensSection";
 import WelcomeSection from "./sections/WelcomeSection";
 
