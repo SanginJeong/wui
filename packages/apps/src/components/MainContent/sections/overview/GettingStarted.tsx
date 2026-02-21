@@ -24,7 +24,7 @@ const GettingStarted = () => {
       </h2>
 
       <div className="relative">
-        <pre className="bg-neutral-900 dark:bg-neutral-950 text-neutral-50 p-4 rounded-lg overflow-x-auto text-sm">
+        <pre className="bg-primary-500 dark:bg-neutral-950 text-neutral-50 p-4 rounded-lg overflow-x-auto text-sm">
           <code>{INSTALL_CMD}</code>
         </pre>
         <div className="absolute top-2 right-2">
