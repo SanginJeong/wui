@@ -11,4 +11,8 @@ export const EXTERNAL_LINKS = {
     label: "Figma",
     href: "https://www.figma.com",
   },
+  npm: {
+    label: "NPM",
+    href: "https://www.npmjs.com",
+  },
 } as const;

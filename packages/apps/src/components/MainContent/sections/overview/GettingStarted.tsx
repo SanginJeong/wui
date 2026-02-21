@@ -25,7 +25,7 @@ const GettingStarted = () => {
             <span className="font-semibold">
               3. Storybook에서 인터랙티브 데모를 확인하세요
             </span>
-            - 아래 바로가기 또는 모바일에서는 사이드바 Quick Links 사용
+            - 아래 바로가기 또는 사이드바의 Quick Links 사용
           </p>
         </div>
       </div>

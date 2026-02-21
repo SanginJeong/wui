@@ -6,12 +6,12 @@ const QuickLinks = () => {
       <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-6">
         바로가기
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="flex flex-wrap gap-4">
         <a
           href={EXTERNAL_LINKS.github.href}
           target="_blank"
           rel="noreferrer"
-          className="rounded-xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+          className="flex-1 min-w-[200px] rounded-xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
         >
           <div className="text-sm font-semibold text-neutral-900 dark:text-white">
             GitHub
@@ -24,7 +24,7 @@ const QuickLinks = () => {
           href={EXTERNAL_LINKS.storybook.href}
           target="_blank"
           rel="noreferrer"
-          className="rounded-xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+          className="flex-1 min-w-[200px] rounded-xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
         >
           <div className="text-sm font-semibold text-neutral-900 dark:text-white">
             Storybook
@@ -37,13 +37,26 @@ const QuickLinks = () => {
           href={EXTERNAL_LINKS.figma.href}
           target="_blank"
           rel="noreferrer"
-          className="rounded-xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+          className="flex-1 min-w-[200px] rounded-xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
         >
           <div className="text-sm font-semibold text-neutral-900 dark:text-white">
             Figma
           </div>
           <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
             디자인 원본과 컴포넌트 스펙을 한 곳에서 확인할 수 있습니다.
+          </p>
+        </a>
+        <a
+          href={EXTERNAL_LINKS.npm.href}
+          target="_blank"
+          rel="noreferrer"
+          className="flex-1 min-w-[200px] rounded-xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+        >
+          <div className="text-sm font-semibold text-neutral-900 dark:text-white">
+            NPM
+          </div>
+          <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+            설치 방법과 배포 버전을 확인할 수 있습니다.
           </p>
         </a>
       </div>
