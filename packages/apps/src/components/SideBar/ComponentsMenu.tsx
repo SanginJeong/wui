@@ -8,11 +8,7 @@ interface ComponentsMenuProps {
   onTabChange: (tab: string) => void;
 }
 
-const componentTabs = [
-  { id: "component-button", label: "Button" },
-  { id: "component-input", label: "Input" },
-  { id: "component-card", label: "Card" },
-];
+const componentTabs = [{ id: "component-button", label: "Button" }];
 
 const ComponentsMenu = ({
   activeTab,
