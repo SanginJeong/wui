@@ -4,7 +4,7 @@ export default function GettingStarted() {
       <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-6">
         시작하기
       </h2>
-      <div className="bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800 rounded-lg p-8">
+      <div className="bg-primary-50 dark:bg-neutral-800 border border-primary-200 dark:border-neutral-700 rounded-lg p-8">
         <p className="text-neutral-700 dark:text-neutral-300 mb-4">
           WonderUI를 프로젝트에 포함시키고 디자인 시스템을 활용해보세요.
         </p>
