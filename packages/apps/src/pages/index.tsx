@@ -19,14 +19,12 @@ export default function Home() {
 
   return (
     <div className="flex flex-col h-screen bg-white dark:bg-neutral-900">
-      {/* Header Navigation */}
       <Nav
         onDarkModeToggle={handleDarkModeToggle}
         onMenuToggle={() => setIsSidebarOpen(!isSidebarOpen)}
         isDarkMode={isDarkMode}
       />
 
-      {/* Main Layout: Sidebar + Content */}
       <div className="flex flex-1 overflow-hidden flex-col md:flex-row">
         <SideBar
           activeTab={activeTab}
