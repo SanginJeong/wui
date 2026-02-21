@@ -18,7 +18,7 @@ const QuickLinks = () => {
             GitHub
           </div>
           <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            코드와 릴리즈, 이슈를 확인하고 기여할 수 있습니다.
+            코드와 개발 기록을 확인할 수 있습니다.
           </p>
         </Link>
         <Link

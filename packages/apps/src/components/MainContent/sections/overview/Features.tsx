@@ -9,15 +9,15 @@ const Features = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FeatureCard
           title="Design Tokens"
-          description="색상, 타이포그래피, 간격 등 모든 디자인 요소를 일관되게 관리하고 사용할 수 있습니다."
+          description="모든 디자인 요소를 일관되게 관리하고 사용할 수 있습니다."
         />
         <FeatureCard
           title="재사용 가능한 컴포넌트"
-          description="Button, Input, Card 등 다양한 기본 컴포넌트들로 빠르게 인터페이스를 구성할 수 있습니다."
+          description="다양한 기본 컴포넌트들로 빠르게 인터페이스를 구성할 수 있습니다."
         />
         <FeatureCard
-          title="접근성 우선"
-          description="모든 컴포넌트는 WCAG 표준을 따르며 시멘틱 HTML 구조로 만들어졌습니다."
+          title="접근성 고려"
+          description="컴포넌트는 시멘틱 HTML과 ARIA 속성을 활용하여 모든 사용자가 접근할 수 있도록 설계되었습니다."
         />
 
         <FeatureCard
