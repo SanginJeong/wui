@@ -5,14 +5,12 @@ interface TabButtonProps {
   className?: string;
 }
 
-export default function TabButton({ id, label, onClick, className }: TabButtonProps) {
+const TabButton = ({ id, label, onClick, className }: TabButtonProps) => {
   return (
-    <button
-      onClick={() => onClick(id)}
-      className={className}
-      type="button"
-    >
+    <button onClick={() => onClick(id)} className={className} type="button">
       {label}
     </button>
   );
-}
+};
+
+export default TabButton;

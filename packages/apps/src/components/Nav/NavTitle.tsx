@@ -1,4 +1,4 @@
-export default function NavTitle() {
+const NavTitle = () => {
   return (
     <div className="flex flex-col gap-1 min-w-0">
       <h1 className="text-xl md:text-2xl font-bold text-neutral-900 dark:text-white truncate">
@@ -9,4 +9,6 @@ export default function NavTitle() {
       </p>
     </div>
   );
-}
+};
+
+export default NavTitle;

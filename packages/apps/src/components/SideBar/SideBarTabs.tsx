@@ -10,10 +10,7 @@ const tabs = [
   { id: "tokens", label: "Design Tokens" },
 ];
 
-export default function SideBarTabs({
-  activeTab,
-  onTabChange,
-}: SideBarTabsProps) {
+const SideBarTabs = ({ activeTab, onTabChange }: SideBarTabsProps) => {
   return (
     <>
       {tabs.map((tab) => (
@@ -31,4 +28,6 @@ export default function SideBarTabs({
       ))}
     </>
   );
-}
+};
+
+export default SideBarTabs;

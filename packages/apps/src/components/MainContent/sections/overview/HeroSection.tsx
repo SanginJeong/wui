@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function HeroSection() {
+const HeroSection = () => {
   return (
     <div className="space-y-4">
       <div>
@@ -18,4 +18,6 @@ export default function HeroSection() {
       </p>
     </div>
   );
-}
+};
+
+export default HeroSection;

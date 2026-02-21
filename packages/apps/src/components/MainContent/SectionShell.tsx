@@ -5,7 +5,7 @@ interface SectionShellProps {
   children: ReactNode;
 }
 
-export default function SectionShell({ title, children }: SectionShellProps) {
+const SectionShell = ({ title, children }: SectionShellProps) => {
   return (
     <section>
       <h2 className="text-3xl font-bold text-neutral-900 dark:text-white mb-6">
@@ -14,4 +14,6 @@ export default function SectionShell({ title, children }: SectionShellProps) {
       <div className="p-6 rounded-lg">{children}</div>
     </section>
   );
-}
+};
+
+export default SectionShell;

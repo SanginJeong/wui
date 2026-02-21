@@ -1,4 +1,4 @@
-export default function GettingStarted() {
+const GettingStarted = () => {
   return (
     <div>
       <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-6">
@@ -31,4 +31,6 @@ export default function GettingStarted() {
       </div>
     </div>
   );
-}
+};
+
+export default GettingStarted;

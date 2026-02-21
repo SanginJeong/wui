@@ -1,6 +1,6 @@
 import FeatureCard from "@/common/FeatureCard";
 
-export default function Features() {
+const Features = () => {
   return (
     <>
       <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-8">
@@ -40,4 +40,6 @@ export default function Features() {
       </div>
     </>
   );
-}
+};
+
+export default Features;

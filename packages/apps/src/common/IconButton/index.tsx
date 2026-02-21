@@ -7,12 +7,12 @@ interface IconButtonProps {
   children: ReactNode;
 }
 
-export default function IconButton({
+const IconButton = ({
   ariaLabel,
   onClick,
   className,
   children,
-}: IconButtonProps) {
+}: IconButtonProps) => {
   return (
     <button
       onClick={onClick}
@@ -23,4 +23,6 @@ export default function IconButton({
       {children}
     </button>
   );
-}
+};
+
+export default IconButton;

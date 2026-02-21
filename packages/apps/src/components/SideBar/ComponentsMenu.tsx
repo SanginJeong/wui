@@ -14,12 +14,12 @@ const componentTabs = [
   { id: "component-card", label: "Card" },
 ];
 
-export default function ComponentsMenu({
+const ComponentsMenu = ({
   activeTab,
   isOpen,
   onToggle,
   onTabChange,
-}: ComponentsMenuProps) {
+}: ComponentsMenuProps) => {
   const isActiveGroup = activeTab.startsWith("component-");
 
   return (
@@ -58,4 +58,6 @@ export default function ComponentsMenu({
       )}
     </div>
   );
-}
+};
+
+export default ComponentsMenu;

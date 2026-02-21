@@ -3,7 +3,7 @@ import Nav from "@/components/Nav";
 import SideBar from "@/components/SideBar";
 import MainContent from "@/components/MainContent";
 
-export default function Home() {
+const Home = () => {
   const [activeTab, setActiveTab] = useState("overview");
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -36,4 +36,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default Home;

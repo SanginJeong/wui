@@ -4,11 +4,7 @@ interface FeatureCardProps {
   description: string;
 }
 
-export default function FeatureCard({
-  icon,
-  title,
-  description,
-}: FeatureCardProps) {
+const FeatureCard = ({ icon, title, description }: FeatureCardProps) => {
   return (
     <div className="bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg p-6 hover:shadow-lg hover:bg-neutral-50 dark:hover:shadow-lg dark:hover:bg-neutral-700 transition-all">
       <div className="text-4xl mb-3">{icon}</div>
@@ -20,4 +16,6 @@ export default function FeatureCard({
       </p>
     </div>
   );
-}
+};
+
+export default FeatureCard;

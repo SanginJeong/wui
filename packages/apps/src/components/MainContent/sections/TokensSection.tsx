@@ -1,6 +1,6 @@
 import SectionShell from "../SectionShell";
 
-export default function TokensSection() {
+const TokensSection = () => {
   return (
     <SectionShell title="Design Tokens">
       <p className="text-neutral-600 dark:text-neutral-400">
@@ -8,4 +8,6 @@ export default function TokensSection() {
       </p>
     </SectionShell>
   );
-}
+};
+
+export default TokensSection;

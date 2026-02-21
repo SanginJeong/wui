@@ -9,11 +9,11 @@ interface NavProps {
   isDarkMode?: boolean;
 }
 
-export default function Nav({
+const Nav = ({
   onDarkModeToggle,
   onMenuToggle,
   isDarkMode = false,
-}: NavProps) {
+}: NavProps) => {
   return (
     <nav className="border-b border-neutral-200 dark:border-neutral-700 px-4 md:px-6 py-4 bg-white dark:bg-neutral-800">
       <div className="flex items-center justify-between gap-4">
@@ -37,4 +37,6 @@ export default function Nav({
       </div>
     </nav>
   );
-}
+};
+
+export default Nav;

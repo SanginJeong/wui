@@ -12,12 +12,12 @@ interface SideBarProps {
   onCloseSidebar?: () => void;
 }
 
-export default function SideBar({
+const SideBar = ({
   activeTab,
   onTabChange,
   isSidebarOpen = false,
   onCloseSidebar = () => {},
-}: SideBarProps) {
+}: SideBarProps) => {
   const [isComponentsOpen, setIsComponentsOpen] = useState(false);
 
   const handleTabChange = (tab: string) => {
@@ -55,4 +55,6 @@ export default function SideBar({
       </aside>
     </>
   );
-}
+};
+
+export default SideBar;

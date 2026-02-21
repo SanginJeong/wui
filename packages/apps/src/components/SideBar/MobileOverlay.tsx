@@ -3,7 +3,7 @@ interface MobileOverlayProps {
   onClose: () => void;
 }
 
-export default function MobileOverlay({ isOpen, onClose }: MobileOverlayProps) {
+const MobileOverlay = ({ isOpen, onClose }: MobileOverlayProps) => {
   if (!isOpen) {
     return null;
   }
@@ -14,4 +14,6 @@ export default function MobileOverlay({ isOpen, onClose }: MobileOverlayProps) {
       onClick={onClose}
     />
   );
-}
+};
+
+export default MobileOverlay;

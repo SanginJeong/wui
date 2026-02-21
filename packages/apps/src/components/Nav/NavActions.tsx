@@ -6,10 +6,7 @@ interface NavActionsProps {
   isDarkMode: boolean;
 }
 
-export default function NavActions({
-  onDarkModeToggle,
-  isDarkMode,
-}: NavActionsProps) {
+const NavActions = ({ onDarkModeToggle, isDarkMode }: NavActionsProps) => {
   return (
     <div className="flex items-center gap-2 flex-shrink-0">
       <IconButton
@@ -40,4 +37,6 @@ export default function NavActions({
       </IconButton>
     </div>
   );
-}
+};
+
+export default NavActions;

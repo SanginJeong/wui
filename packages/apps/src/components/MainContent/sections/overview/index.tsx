@@ -4,7 +4,7 @@ import Features from "./Features";
 import GettingStarted from "./GettingStarted";
 import HeroSection from "./HeroSection";
 
-export default function OverviewSection() {
+const OverviewSection = () => {
   return (
     <SectionShell>
       <div className="space-y-12">
@@ -16,4 +16,6 @@ export default function OverviewSection() {
       </div>
     </SectionShell>
   );
-}
+};
+
+export default OverviewSection;
