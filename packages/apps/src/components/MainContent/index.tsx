@@ -1,5 +1,5 @@
 import OverviewSection from "./sections/overview";
-import TokensSection from "./sections/TokensSection";
+import TokensSection from "./sections/design-tokens";
 import WelcomeSection from "./sections/WelcomeSection";
 
 interface MainContentProps {
