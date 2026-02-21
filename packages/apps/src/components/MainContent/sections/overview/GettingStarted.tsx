@@ -1,10 +1,48 @@
+import { useState } from "react";
+import IconButton from "@/common/IconButton";
+import { Copy, Check } from "lucide-react";
+
+const INSTALL_CMD = "npm install wonderui-tokens";
+
 const GettingStarted = () => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(INSTALL_CMD);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (e) {
+      console.error("복사 실패:", e);
+    }
+  };
+
   return (
-    <div>
-      <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-6">
+    <div className="space-y-6">
+      <h2 className="text-2xl font-bold text-neutral-900 dark:text-white">
         시작하기
       </h2>
-      <div className="bg-primary-50 dark:bg-neutral-800 border border-primary-200 dark:border-neutral-700 rounded-lg p-8">
+
+      <div className="relative">
+        <pre className="bg-neutral-900 dark:bg-neutral-950 text-neutral-50 p-4 rounded-lg overflow-x-auto text-sm">
+          <code>{INSTALL_CMD}</code>
+        </pre>
+        <div className="absolute top-2 right-2">
+          <IconButton
+            onClick={handleCopy}
+            ariaLabel={copied ? "복사됨" : "복사"}
+            className="p-2 bg-black/10 dark:bg-white/5 rounded"
+          >
+            {copied ? (
+              <Check size={16} className="text-green-400" />
+            ) : (
+              <Copy size={16} className="text-neutral-100" />
+            )}
+          </IconButton>
+        </div>
+      </div>
+
+      <div className="bg-primary-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg p-8">
         <p className="text-neutral-700 dark:text-neutral-300 mb-4">
           WonderUI를 프로젝트에 포함시키고 디자인 시스템을 활용해보세요.
         </p>

@@ -11,11 +11,11 @@ const OverviewSection = () => {
       <div className="space-y-12">
         <HeroSection />
         <Divider />
+        <GettingStarted />
+        <Divider />
         <QuickLinks />
         <Divider />
         <Features />
-        <Divider />
-        <GettingStarted />
       </div>
     </SectionShell>
   );
