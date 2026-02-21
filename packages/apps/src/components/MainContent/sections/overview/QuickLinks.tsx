@@ -1,4 +1,5 @@
 import { EXTERNAL_LINKS } from "@/common/links";
+import Link from "next/link";
 
 const QuickLinks = () => {
   return (
@@ -7,7 +8,7 @@ const QuickLinks = () => {
         바로가기
       </h2>
       <div className="flex flex-wrap gap-4">
-        <a
+        <Link
           href={EXTERNAL_LINKS.github.href}
           target="_blank"
           rel="noreferrer"
@@ -19,8 +20,8 @@ const QuickLinks = () => {
           <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
             코드와 릴리즈, 이슈를 확인하고 기여할 수 있습니다.
           </p>
-        </a>
-        <a
+        </Link>
+        <Link
           href={EXTERNAL_LINKS.storybook.href}
           target="_blank"
           rel="noreferrer"
@@ -32,8 +33,8 @@ const QuickLinks = () => {
           <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
             컴포넌트를 인터랙티브하게 확인하고 사용 예시를 살펴보세요.
           </p>
-        </a>
-        <a
+        </Link>
+        <Link
           href={EXTERNAL_LINKS.figma.href}
           target="_blank"
           rel="noreferrer"
@@ -45,8 +46,8 @@ const QuickLinks = () => {
           <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
             디자인 원본과 컴포넌트 스펙을 한 곳에서 확인할 수 있습니다.
           </p>
-        </a>
-        <a
+        </Link>
+        <Link
           href={EXTERNAL_LINKS.npm.href}
           target="_blank"
           rel="noreferrer"
@@ -58,7 +59,7 @@ const QuickLinks = () => {
           <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
             설치 방법과 배포 버전을 확인할 수 있습니다.
           </p>
-        </a>
+        </Link>
       </div>
     </div>
   );
