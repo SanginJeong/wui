@@ -9,7 +9,6 @@ interface MainContentProps {
 const contentByTab: Record<string, JSX.Element> = {
   overview: <OverviewSection />,
   tokens: <TokensSection />,
-  // "component-button": <ButtonSection />,
 };
 
 const MainContent = ({ activeTab }: MainContentProps) => {

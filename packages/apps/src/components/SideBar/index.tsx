@@ -4,6 +4,7 @@ import ComponentsMenu from "./ComponentsMenu";
 import MobileOverlay from "./MobileOverlay";
 import SideBarTabs from "./SideBarTabs";
 import IconButton from "@/common/IconButton";
+import QuickLinks from "./QuickLinks";
 
 interface SideBarProps {
   activeTab: string;
@@ -31,7 +32,7 @@ const SideBar = ({
     <>
       <MobileOverlay isOpen={isSidebarOpen} onClose={onCloseSidebar} />
       <aside
-        className={`w-64 border-r border-neutral-200 dark:border-neutral-700 p-6 bg-neutral-50 dark:bg-neutral-800 overflow-y-auto fixed md:static top-16 left-0 h-[calc(100vh-64px)] md:h-auto z-40 transition-transform duration-300 transform ${
+        className={`w-64 border-r border-neutral-200 dark:border-neutral-700 p-6 bg-neutral-50 dark:bg-neutral-800 overflow-y-auto fixed md:static top-20 left-0 h-[calc(100vh-80px)] md:h-auto z-40 transition-transform duration-300 transform ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
         }`}
       >
@@ -51,6 +52,7 @@ const SideBar = ({
             onToggle={() => setIsComponentsOpen(!isComponentsOpen)}
             onTabChange={handleTabChange}
           />
+          <QuickLinks />
         </div>
       </aside>
     </>

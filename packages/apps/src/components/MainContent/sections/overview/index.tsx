@@ -3,12 +3,15 @@ import SectionShell from "../../SectionShell";
 import Features from "./Features";
 import GettingStarted from "./GettingStarted";
 import HeroSection from "./HeroSection";
+import QuickLinks from "./QuickLinks";
 
 const OverviewSection = () => {
   return (
     <SectionShell>
       <div className="space-y-12">
         <HeroSection />
+        <Divider />
+        <QuickLinks />
         <Divider />
         <Features />
         <Divider />

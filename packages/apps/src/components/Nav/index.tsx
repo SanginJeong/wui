@@ -15,8 +15,8 @@ const Nav = ({
   isDarkMode = false,
 }: NavProps) => {
   return (
-    <nav className="border-b border-neutral-200 dark:border-neutral-700 px-4 md:px-6 py-4 bg-white dark:bg-neutral-800">
-      <div className="flex items-center justify-between gap-4">
+    <nav className="sticky top-0 z-50 h-20 border-b border-neutral-200 dark:border-neutral-700 px-4 md:px-6 bg-white dark:bg-neutral-800 flex items-center">
+      <div className="flex items-center justify-between gap-4 w-full">
         <div className="flex items-center gap-3 min-w-0">
           <IconButton
             onClick={onMenuToggle}

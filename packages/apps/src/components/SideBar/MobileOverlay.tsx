@@ -10,7 +10,7 @@ const MobileOverlay = ({ isOpen, onClose }: MobileOverlayProps) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-50 md:hidden z-30 top-16"
+      className="fixed left-0 right-0 bottom-0 top-20 bg-black bg-opacity-50 md:hidden z-30"
       onClick={onClose}
     />
   );
