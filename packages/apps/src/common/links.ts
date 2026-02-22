@@ -5,7 +5,7 @@ export const EXTERNAL_LINKS = {
   },
   storybook: {
     label: "Storybook",
-    href: "https://storybook.js.org",
+    href: "https://699acb6b1f4cfe69cedaa219-pfpzihvegm.chromatic.com/",
   },
   figma: {
     label: "Figma",
