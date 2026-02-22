@@ -1,0 +1,37 @@
+name: Chromatic
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+    # Only run Chromatic for PRs that touch UI, Storybook, tokens or docs
+    paths:
+      - "packages/apps/src/**"
+      - "packages/apps/**/*.stories.*"
+      - "packages/apps/.storybook/**"
+      - "packages/tokens/**"
+
+jobs:
+  chromatic:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Publish to Chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          workingDir: packages/apps
+          buildScriptName: build-storybook

@@ -2,6 +2,14 @@
   "name": "wonderui-tokens",
   "version": "0.0.1",
   "main": "dist/tokens.css",
+  "keywords": [
+    "design-system",
+    "design-tokens",
+    "css-variables",
+    "tailwind",
+    "wonderui",
+    "wui"
+  ],
   "files": [
     "dist"
   ],
