@@ -5,6 +5,14 @@ on:
     branches:
       - main
   pull_request:
+    branches:
+      - main
+    # Only run Chromatic for PRs that touch UI, Storybook, tokens or docs
+    paths:
+      - "packages/apps/src/**"
+      - "packages/apps/**/*.stories.*"
+      - "packages/apps/.storybook/**"
+      - "packages/tokens/**"
 
 jobs:
   chromatic:
